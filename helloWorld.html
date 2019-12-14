@@ -1,9 +1,237 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<h1>My First Heading</h1>
-<p>My Hello World.</p>
 
-</body>
+
+<body class="w3-content" style="max-width:1800px">
+
+    <head>
+        <style>
+            body {
+                background-color: rgb(0, 140, 255);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            /* Create two unequal columns that floats next to each other */
+            .column {
+                float: left;
+                padding: 10px;
+                width: 50%;
+            }
+
+            .video {
+            }
+
+            .annoucement {
+            }
+
+            .dateTime{
+                
+            }
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+
+
+
+            .grid-container {
+                display: grid;
+                grid-gap: 10px;
+                background-color: #2196F3;
+                padding: 10px;
+            }
+            
+            .grid-container {
+                background-color: rgba(255, 255, 255, 0.8);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+            
+            .item1 {
+                grid-column: 1 / 5;
+                /* grid-row: 1; */
+            }    
+            
+            h1 {
+                color: white;
+                text-align: center;
+                
+            }
+            
+            p {
+                font-family: verdana;
+                font-size: 20px;
+                text-align: center;
+                background-color: lightgrey;
+            }
+            /* classSelector Hello */
+            
+            .Hello {
+                border-bottom: 6px solid red;
+                font-family: verdana;
+                font-size: 20px;
+                text-align: center;
+                color: rebeccapurple;
+                width: 100px;
+            }
+            
+            .dateTime {
+                top: 10px;
+                right: 16px;
+                width: 100px;
+            }
+            
+            .Annoucement {}
+            
+            .Sensei {}
+            
+            .StemNews {}
+            
+            marquee {
+                width: 500;
+                behavior: slide;
+                background-color: bisque;
+            }
+        </style>
+
+        <script>
+        // this is where you put the javascript for this html file
+        function updateClock() {
+            var now = new Date(), // current date
+                months = ['January', 'February', '...']; // you get the idea
+                time = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds(), // again, you get the idea
+
+            // a cleaner way than string concatenation
+            date = [now.getDate(), 
+                    months[now.getMonth()],
+                    now.getFullYear()].join(' ');
+
+            // set the content of the element with the ID time to the formatted string
+            document.getElementById('date_time_txt').innerHTML = [date, time].join(' / ');
+        }
+        setInterval(updateClock, 1000); // initial call
+        </script>
+
+    </head>
+
+
+
+    <body>
+        <!-- <div class="w3-content w3-margin-top" style=",ax-width:1400px;"> -->
+        <div class="w3-panel w3-blue">
+            <div class="w3-container">
+                <div class="w3-left-align">Code Ninja Aurora</div>
+
+            <!-- <h1></h1> -->
+            <img src="white-belt.svg" alt="white-belt" width="50" height="60">
+            <img src="yellow-belt.svg" alt="white-belt" width="50" height="60">
+            <img src="orange-belt.svg" alt="white-belt" width="50" height="60">
+            <img src="green-belt.svg" alt="white-belt" width="50" height="60">
+            <img src="blue-belt.svg" alt="white-belt" width="50" height="60">
+            <img src="purple-belt.svg" alt="white-belt" width="50" height="60">
+            <img src="brown-belt.svg" alt="white-belt" width="50" height="60">
+            <img src="red-belt.svg" alt="white-belt" width="50" height="60">
+            <img src="black-belt.svg" alt="white-belt" width="50" height="60">
+           
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column video" style="background-color:#aaa;">
+              <h2>Video</h2>
+              <p>
+                <video controls>
+                    <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm> 
+                    <source src="mov_bbb.mp4" type="video/mp4">
+                    <source src="mov_bbb.ogg" type="video/ogg">
+                            
+                </video> 
+               </p>
+            </div>
+            
+            <div class="column">
+                <div class="w3-card">
+                    <p> date Time</p>
+                    <!-- Date time call the JS -->
+                    <div class="dateTime" id="date_time_txt">  
+                        
+                       
+                    </div>
+                </div>
+
+                <div class="annoucement" style="background-color:#bbb;">
+                    <h2>Annoucement</h2>
+                    <ul> 
+                        <li>Today </li>
+                        <li>Tomorrow</li>
+                    </ul>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+        <div class="row" style="height:150px;">
+        
+        <!-- <p class="item4"></p>Sensei </p> -->
+           <!-- <p class="Sensei">Sensei</p> -->
+           <div class="column">
+                <p>Today Sensei 
+<!-- it is better to not use <br/> but use padding or add a div with a height -->
+
+                </br></br></br>
+            </br></br></br>
+            </br></br></br>
+            </br>
+
+
+
+
+                </p>
+
+                
+            </div>
+            <div class="column">
+
+                <p>Stem News
+
+                    </br></br>
+                    </br></br>
+                    </br></br>
+                    </br></br>
+                    </br></br>
+
+                </p>
+        </div>
+           
+            <!-- <p class="StemNews">StemNews</p> -->
+
+
+
+               
+
+
+           
+    </body>
+
+    <footer>
+
+        <marquee loop: 99;>
+            Roger Feng just completed yellow belt this week!
+        </marquee>
+
+    </footer>
 </html>
